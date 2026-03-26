@@ -11,10 +11,10 @@ public class Lever : MonoBehaviour
     {
         if (isUsed) return;
 
-        if (Input. GetKeyDown(KeyCode.E))
+        if (Input.GetKeyDown(KeyCode.E))
         {
             isUsed = true;
-            Debug.Log("레버를 당겼다");
+            Debug.Log("레버를 당겼다.");
             OnPulled.Invoke();
         }
     }
