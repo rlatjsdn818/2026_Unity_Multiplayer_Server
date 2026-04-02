@@ -15,6 +15,9 @@ GameObject:
   - component: {fileID: 6337378528510856432}
   - component: {fileID: 6066360677288616506}
   - component: {fileID: -1943058598029926821}
+  - component: {fileID: 550573146833861491}
+  - component: {fileID: 2852643159063050228}
+  - component: {fileID: -5686083554233011236}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -138,6 +141,8 @@ MonoBehaviour:
   NetworkedBehaviours:
   - {fileID: 6066360677288616506}
   - {fileID: -1943058598029926821}
+  - {fileID: 550573146833861491}
+  - {fileID: -5686083554233011236}
   ForceRemoteRenderTimeframe: 0
 --- !u!114 &6066360677288616506
 MonoBehaviour:
@@ -173,7 +178,61 @@ MonoBehaviour:
   bulletPrefab:
     RawGuidValue: ef3ed438c47d38743b1ccdf8c210f2d1
   firePoint: {fileID: 5264067248639271649}
+  fireDistance: 20
+  hitMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
   fireInterval: 0.2
+--- !u!114 &550573146833861491
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3011665982120420498}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 1039544458, guid: e725a070cec140c4caffb81624c8c787, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Fusion.Runtime.dll::Fusion.HitboxRoot
+  Config: 3
+  BroadRadius: 0
+  Offset: {x: 0, y: 0, z: 0}
+  GizmosColor: {r: 0.5, g: 0.5, b: 0.5, a: 1}
+  Hitboxes: []
+--- !u!114 &2852643159063050228
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3011665982120420498}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 1014831617, guid: e725a070cec140c4caffb81624c8c787, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Fusion.Runtime.dll::Fusion.Hitbox
+  Type: 1
+  SphereRadius: 0
+  CapsuleRadius: 0
+  BoxExtents: {x: 0.5, y: 1, z: 0.5}
+  CapsuleExtents: 0
+  Offset: {x: 0, y: 0, z: 0}
+  Root: {fileID: 0}
+  GizmosColor: {r: 1, g: 0.92156863, b: 0.015686275, a: 1}
+--- !u!114 &-5686083554233011236
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3011665982120420498}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e978103b0e41d234ca411672ee05d4ac, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::HealthTarget
+  _HP: 0
 --- !u!1 &4456630032479766673
 GameObject:
   m_ObjectHideFlags: 0
