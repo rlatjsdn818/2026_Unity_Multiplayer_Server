@@ -27,6 +27,7 @@ public class FusionBootstrap : MonoBehaviour , INetworkRunnerCallbacks
     public enum InputButton
     {
         Fire = 0,
+        Jump = 1
     }
 
 
@@ -113,8 +114,9 @@ public class FusionBootstrap : MonoBehaviour , INetworkRunnerCallbacks
             Input.GetAxisRaw("Horizontal"),
             Input.GetAxisRaw("Vertical")
         );
-        var buttons = new NetworkButtons();
+        var buttons = new NetworkButtons();   //네트워크 버튼 생성
         buttons.Set((int)InputButton.Fire, Input.GetMouseButtonDown(0));  //이건 마우스버튼
+        buttons.Set((int)InputButton.Jump, Input.GetKey(KeyCode.Space));  //점프 버튼
 
         data.buttons = buttons;
         input.Set(data);
